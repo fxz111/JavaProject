@@ -1,0 +1,14 @@
+com\fxz\travel\service\impl\ISysLogServiceimpl.class
+com\fxz\travel\service\IPermissionService.class
+com\fxz\travel\service\impl\IPermissionServiceimpl.class
+com\fxz\travel\service\ITravellerService.class
+com\fxz\travel\service\IProductService.class
+com\fxz\travel\service\IUserService.class
+com\fxz\travel\service\impl\ProductImpl.class
+com\fxz\travel\service\impl\IRoleServiceimpl.class
+com\fxz\travel\service\IMemberService.class
+com\fxz\travel\service\IOrdersService.class
+com\fxz\travel\service\impl\OrdersImpl.class
+com\fxz\travel\service\IRoleService.class
+com\fxz\travel\service\ISysLogService.class
+com\fxz\travel\service\impl\UserServiceimpl.class

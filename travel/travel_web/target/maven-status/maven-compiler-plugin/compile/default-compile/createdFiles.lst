@@ -1,0 +1,7 @@
+com\fxz\travel\controller\PermissionController.class
+com\fxz\travel\controller\SysLogController.class
+com\fxz\travel\controller\LogAop.class
+com\fxz\travel\controller\RoleController.class
+com\fxz\travel\controller\UserController.class
+com\fxz\travel\controller\OrderController.class
+com\fxz\travel\controller\ProductController.class

@@ -1,0 +1,8 @@
+com\fxz\travel\dao\IPermissionDao.class
+com\fxz\travel\dao\IUserDao.class
+com\fxz\travel\dao\IRoleDao.class
+com\fxz\travel\dao\IMemberDao.class
+com\fxz\travel\dao\IOrdersDao.class
+com\fxz\travel\dao\IProductDao.class
+com\fxz\travel\dao\ITravellerDao.class
+com\fxz\travel\dao\ISysLogDao.class

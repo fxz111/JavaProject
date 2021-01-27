@@ -1,0 +1,8 @@
+com\fxz\travel\domain\Product.class
+com\fxz\travel\domain\Role.class
+com\fxz\travel\domain\Traveller.class
+com\fxz\travel\domain\Orders.class
+com\fxz\travel\domain\UserInfo.class
+com\fxz\travel\domain\Permission.class
+com\fxz\travel\domain\SysLog.class
+com\fxz\travel\domain\Member.class
