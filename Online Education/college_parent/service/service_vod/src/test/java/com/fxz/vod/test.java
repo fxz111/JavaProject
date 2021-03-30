@@ -6,8 +6,8 @@ import com.aliyun.vod.upload.resp.UploadVideoResponse;
 
 public class test {
     public static void main(String[] args) {
-        String accessKeyId = "LTAI4GCPmDqCGAUyayBWUM3X";
-        String accessKeySecret = "xIMNlyFjuTfRUygkYyzVN6tG9usMhs";
+        String accessKeyId = key
+        String accessKeySecret = secret
 
         String title = "me-upload";   //上传之后文件名称
         String fileName = "C:/Users/FengXZ/Desktop/1.MP4";  //本地文件路径和名称
