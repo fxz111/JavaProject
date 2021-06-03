@@ -33,6 +33,11 @@ public class ScoremovieController {
         List<Map<String, Object>> list = scoremovieService.getscore();
         return R.ok().data("title","电影年度评分").data("list",list);
     }
+    @GetMapping("getscoreList")
+    public R getscoreList(){
+        List<Scoremovie> list = scoremovieService.list(null);
+        return R.ok().data("list",list);
+    }
 
 }
 

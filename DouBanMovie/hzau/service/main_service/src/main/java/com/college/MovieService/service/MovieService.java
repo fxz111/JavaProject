@@ -1,5 +1,6 @@
 package com.college.MovieService.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.college.MovieService.entity.Movie;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.college.commonutils.R;
@@ -41,4 +42,8 @@ public interface MovieService extends IService<Movie> {
     R getDre();
 
     R getAct();
+
+    void pageQuery(Page<Movie> pageCourse, Movie movie);
+
+
 }

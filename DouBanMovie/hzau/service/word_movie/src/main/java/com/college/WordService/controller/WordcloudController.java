@@ -1,6 +1,7 @@
 package com.college.WordService.controller;
 
 
+import com.college.WordService.entity.Wordcloud;
 import com.college.WordService.entity.Wordquery;
 import com.college.WordService.service.WordcloudService;
 import com.college.commonutils.R;
@@ -30,6 +31,11 @@ public class WordcloudController {
     @GetMapping("getwordcloud")
     public R getwordcloud(){
         List<Wordquery> list = wordcloudService.getList();
+        return R.ok().data("list",list);
+    }
+    @GetMapping("getwordList")
+    public R getwordList(){
+        List<Wordcloud> list = wordcloudService.list(null);
         return R.ok().data("list",list);
     }
 }

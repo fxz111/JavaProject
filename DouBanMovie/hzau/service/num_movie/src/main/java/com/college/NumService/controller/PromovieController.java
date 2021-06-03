@@ -30,5 +30,6 @@ public class PromovieController {
         List<Map<String, Object>> list = promovieService.getnum();
         return R.ok().data("title","电影年度产量").data("list",list);
     }
+
 }
 

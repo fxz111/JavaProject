@@ -19,6 +19,7 @@
         <module>hot_movie</module>
         <module>num_movie</module>
         <module>word_movie</module>
+        <module>test_movie</module>
     </modules>
 
     <dependencies>

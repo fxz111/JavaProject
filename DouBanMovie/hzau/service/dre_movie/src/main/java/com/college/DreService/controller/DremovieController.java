@@ -56,6 +56,11 @@ public class DremovieController {
         List<Dre> list = dremovieService.getDreMovie();
         return R.ok().data("title","导演影片分析").data("list",list);
     }
+    @GetMapping("getdreList")
+    public R getdreList(){
+        List<Dremovie> list = dremovieService.list(null);
+        return R.ok().data("list",list);
+    }
 
 }
 

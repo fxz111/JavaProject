@@ -1,6 +1,7 @@
 package com.college.MovieService.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.college.MovieService.client.*;
 import com.college.MovieService.entity.Movie;
 import com.college.MovieService.mapper.MovieMapper;
@@ -11,6 +12,7 @@ import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -205,4 +207,16 @@ public class MovieServiceImpl extends ServiceImpl<MovieMapper, Movie> implements
         R scoreEveryAct = actClient.getScoreEveryAct();
         return scoreEveryAct;
     }
+
+    @Override
+    public void pageQuery(Page<Movie> pageCourse, Movie movie) {
+        QueryWrapper<Movie> wrapper = new QueryWrapper<>();
+        String moviename = movie.getMovieName();
+        if (!StringUtils.isEmpty(moviename)){
+            wrapper.like("Movie_name",moviename);
+        }
+        //wrapper.orderByDesc("id");
+        baseMapper.selectPage(pageCourse,wrapper);
+    }
+
 }

@@ -1,4 +1,6 @@
 package com.college.MovieService.controller;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.college.MovieService.entity.Movie;
 import com.college.MovieService.service.MovieService;
 import com.college.commonutils.R;
 import io.swagger.annotations.Api;
@@ -20,11 +22,24 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/MovieService/movie")
-@CrossOrigin
+@CrossOrigin()
 @Api(description = "电影接口")
 public class MovieController {
     @Autowired
     private MovieService movieService;
+
+    //电影分页查询
+    @ApiOperation(value = "电影分页查询")
+    @PostMapping ("getmovieList/{page}/{limit}")
+    public R getmovieList(@PathVariable long page,
+                          @PathVariable long limit,
+                          @RequestBody(required = false) Movie movie){
+        Page<Movie> pageCourse = new Page<>(page,limit);
+        movieService.pageQuery(pageCourse,movie);
+        long total = pageCourse.getTotal();//总记录数
+        List<Movie> records = pageCourse.getRecords(); //数据list集合
+        return R.ok().data("total",total).data("list",records);
+    }
 
     //地区热度（地图）
     @ApiOperation(value = "地区热度")

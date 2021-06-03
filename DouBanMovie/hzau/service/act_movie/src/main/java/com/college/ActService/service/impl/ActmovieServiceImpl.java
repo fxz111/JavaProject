@@ -1,6 +1,7 @@
 package com.college.ActService.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.college.ActService.entity.Act;
 import com.college.ActService.entity.Actmovie;
 import com.college.ActService.entity.movie;
@@ -22,6 +23,8 @@ import java.util.List;
  */
 @Service
 public class ActmovieServiceImpl extends ServiceImpl<ActmovieMapper, Actmovie> implements ActmovieService {
+
+
 
     @Override
     public List<Act> getActMovie() {

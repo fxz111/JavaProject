@@ -1,6 +1,7 @@
 package com.college.ActService.controller;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.college.ActService.entity.Act;
 import com.college.ActService.entity.Actmovie;
 import com.college.ActService.service.ActmovieService;
@@ -8,11 +9,7 @@ import com.college.commonutils.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +52,12 @@ public class ActmovieController {
         List<Act> list  = actmovieService.getActMovie();
         return R.ok().data("title","演员影片分析").data("list",list);
     }
+    @GetMapping("getactList")
+    public R getactList(){
+        List<Actmovie> list = actmovieService.list(null);
+        return R.ok().data("list",list);
+    }
+
 
 }
 

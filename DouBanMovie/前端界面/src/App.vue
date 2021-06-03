@@ -6,5 +6,6 @@
 </template>
 
 <style lang="less" scoped>
-
+@import "./assets/css/main.css";
+@import "./assets/css/color-dark.css";
 </style>
